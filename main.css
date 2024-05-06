@@ -77,25 +77,21 @@ section h2 {
 }
 
 .camisastime {
-    flex-wrap: wrap;
+    display: flex;
 }
 
 .camisastime li {
+    margin-right: 10px;
     list-style-type: none;
-    max-width: 30%;
     margin-bottom: 24px;
 }
 
 .camisastime li img {
-    max-width: 100%;
+    max-width: 280px;
 }
 
 .camisastime li h3 {
     margin: 16px 0;
-}
-
-.item-central {
-    margin: 0 5%;
 }
 
 .price {
@@ -132,17 +128,14 @@ footer li img {
 }
 
 @media screen and (max-width: 767px) {
-    .container {
-        display: block;
-    }
-
+    .container,
     .container-flex {
-        max-width: 90%;
+        display: block;
         max-width: 767px;
+        margin: 0 2%;
     }
 
-    header > .container,
-    footer > .container {
+    header > .container {
         padding-left: 10px;
         font-size: 16px;
         display: flex;
@@ -163,6 +156,40 @@ footer li img {
         padding: 20px 0;
     }
 
+    .camisastime li img {
+        max-width: 450px;
+    }
+
+    .item-central {
+        margin: 0 1%;
+    }
+
+    .camisastime li {
+        list-style-type: none;
+        max-width: 95%;
+        margin-bottom: 24px;
+    }
+
+    footer > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    }
+
+    footer li img {
+        display: flex;
+        height: 25px;
+        margin-bottom: 5px;
+    }
+
+    footer {
+        font-size: 15px;
+        display: flex;
+        background-color: #192a56;
+        color: #fff;
+    }
+
 }
 
 @media screen and (min-width: 767px) and ( max-width: 1023px) {
@@ -172,13 +199,20 @@ footer li img {
         max-width: 1023px;
         width: 100%;
         padding-left: 12px;
+        margin: 0 5%;
     }
 
     .container-flex {
         max-width: 1023px;
     }
 
+    #destaque {
+        margin-right: 50px;
+    }
+
     #sobre-a-loja img {
+        margin: 0 7%;
+        margin-bottom: 10px;
         max-width: 100%;
     }
 
@@ -194,8 +228,24 @@ footer li img {
     }
 
     nav li {
-        padding-right: 10px;
+        padding-right: 20px;
         font-size: 20px;
+    }
+
+    .camisastime li {
+        margin-right: 55px;
+        display: grid;
+        max-width: 400px;
+    }
+
+
+    .item-central {
+        margin: 0;
+    }
+
+    footer {
+        display: flex;
+        margin-right: 10px;
     }
 
 }
